@@ -5,30 +5,41 @@ let pokeHeight = document.querySelector('#height')
 let pokeAbilities = document.querySelector('#abilities')
 let pokeMoves = document.querySelector('#moves')
 
-const abilities = (pokemon) => {
-    for(let skill of pokemon.abilities){
-        console.log(skill.ability.name)
-    }
+const clear = (pokemon) => {
+    
 }
 
 let check = () => {
     fetch('https://pokeapi.co/api/v2/pokemon/'+pokeName.value+'/')
         .then((response) => response.json())
         .then((data) => {
+            console.log(data.abilities)
             let abilitiesLimit = 3
+            if(data.abilities.length < 3){
+                abilitiesLimit = data.abilities.length
+            }
+            let abilitiesList = []
             for(let ability of data.abilities){
                 abilitiesLimit -= 1
-                pokeAbilities.innerText += ' ' + ability.ability.name + ', '
+                abilitiesList.push(ability.ability.name)
+                //pokeAbilities.innerText += ' ' + ability.ability.name + ', '
                 if(abilitiesLimit === 0){
+                    pokeAbilities.innerText = `Abilities: ${[...abilitiesList]}`
                     break
                 }
             }
             pokeHeight.innerText = 'Height: ' + data.height 
             let movesLimit = 3
+            if(data.moves.length < 3){
+                movesLimit = data.moves.length
+            }
+            let movesList = []
             for(let move of data.moves){
                 movesLimit -= 1
-                pokeMoves.innerText += ' ' + move.move.name + ', '
+                movesList.push(move.move.name)
+                //pokeMoves.innerText += ' ' + move.move.name + ', '
                 if(movesLimit === 0){
+                    pokeMoves.innerText = `Top Moves: ${[...movesList]}`
                     break
                 }
             }
