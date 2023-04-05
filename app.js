@@ -4,6 +4,7 @@ let pokeInfo = document.querySelector('#poke-info')
 let pokeHeight = document.querySelector('#height')
 let pokeAbilities = document.querySelector('#abilities')
 let pokeMoves = document.querySelector('#moves')
+let pokeImg = document.querySelector('#picture')
 
 const clear = (pokemon) => {
     
@@ -13,7 +14,8 @@ let check = () => {
     fetch('https://pokeapi.co/api/v2/pokemon/'+pokeName.value+'/')
         .then((response) => response.json())
         .then((data) => {
-            console.log(data.abilities)
+            console.log(data.types)
+            console.log(data.types[0].type.name)
             let abilitiesLimit = 3
             if(data.abilities.length < 3){
                 abilitiesLimit = data.abilities.length
@@ -43,6 +45,7 @@ let check = () => {
                     break
                 }
             }
+            pokeImg.setAttribute("src",`${data.sprites.front_default}`)
             pokeInfo.innerText = data.name
         })
 }
