@@ -11,7 +11,7 @@ let check = () => {
     fetch('https://pokeapi.co/api/v2/pokemon/'+searchName.value+'/')
         .then((response) => response.json())
         .then((data) => {
-            console.log(data.types)
+            console.log(data)
             console.log(data.types[0].type.name)
             let abilitiesLimit = 3
             if(data.abilities.length < 3){
@@ -21,7 +21,6 @@ let check = () => {
             for(let ability of data.abilities){
                 abilitiesLimit -= 1
                 abilitiesList.push(ability.ability.name)
-                //pokeAbilities.innerText += ' ' + ability.ability.name + ', '
                 if(abilitiesLimit === 0){
                     pokeAbilities.innerText = `Abilities: ${[...abilitiesList]}`
                     break
@@ -43,16 +42,9 @@ let check = () => {
                 }
             }
             pokeImg.setAttribute("src",`${data.sprites.front_default}`)
-            let name = data.name
             pokeName.innerText = data.name
         })
 }
 
-let list = ['a','b','c']
-let string =''
-for(let val of list){
-    string += val + ' '
-    //console.log(string)
-}
 
 search.addEventListener('click',check)

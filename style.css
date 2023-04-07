@@ -7,10 +7,34 @@
     height:189px;
     position: absolute;
     left:50px;
-    bottom: 228px;
+    bottom: 349px;
     background-color:black ;
+}
+
+.stats{
+    position: absolute;
 }
 
 #poke-name{
     position: absolute;
+    font-size: 30px;
+    font-weight: 600;
+    top: 154px;
+    left: 50px;
 }
+
+#abilities{
+    top: 417px;
+    left: 100px;
+}
+
+#moves{
+    top: 440px;
+    left: 30px;
+}
+
+#height{
+    top: 465px;
+    left: 140px;
+}
+
