@@ -1,8 +1,16 @@
+*{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 #picture{
     width:265px;
     height:189px;
     position: absolute;
     left:50px;
-    bottom: 177px;
+    bottom: 228px;
     background-color:black ;
+}
+
+#poke-name{
+    position: absolute;
 }

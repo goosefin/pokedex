@@ -1,17 +1,14 @@
-let pokeName = document.querySelector('#poke-name')
+let searchName = document.querySelector('#search-name')
 let search = document.querySelector('#search')
 let pokeInfo = document.querySelector('#poke-info')
 let pokeHeight = document.querySelector('#height')
 let pokeAbilities = document.querySelector('#abilities')
 let pokeMoves = document.querySelector('#moves')
 let pokeImg = document.querySelector('#picture')
-
-const clear = (pokemon) => {
-    
-}
+let pokeName = document.querySelector('#poke-name')
 
 let check = () => {
-    fetch('https://pokeapi.co/api/v2/pokemon/'+pokeName.value+'/')
+    fetch('https://pokeapi.co/api/v2/pokemon/'+searchName.value+'/')
         .then((response) => response.json())
         .then((data) => {
             console.log(data.types)
@@ -46,7 +43,8 @@ let check = () => {
                 }
             }
             pokeImg.setAttribute("src",`${data.sprites.front_default}`)
-            pokeInfo.innerText = data.name
+            let name = data.name
+            pokeName.innerText = data.name
         })
 }
 
