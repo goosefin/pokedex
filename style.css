@@ -2,28 +2,42 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+body{
+    background-image: url("21700.png");
+    background-size: cover;
+}
+
 #picture{
     width:265px;
     height:189px;
     position: absolute;
     left:50px;
-    bottom: 349px;
-    background-color:black ;
+    bottom: 411px;
+    background-color:white ;
 }
 
 .stats{
+    margin: 10px 0 10px 0;
+}
+
+#card-stats{
     position: absolute;
+    width: 300px;
+    display:flex;
+    flex-direction: column;
+    bottom: 260px;
+    left: 31px;
 }
 
 #poke-name{
     position: absolute;
     font-size: 30px;
     font-weight: 600;
-    top: 154px;
+    top: 145px;
     left: 50px;
 }
 
-#abilities{
+/* #abilities{
     top: 417px;
     left: 100px;
 }
@@ -36,5 +50,8 @@
 #height{
     top: 465px;
     left: 140px;
-}
+} */
+
+
+
 
