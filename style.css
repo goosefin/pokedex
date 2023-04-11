@@ -5,15 +5,19 @@
 body{
     background-image: url("21700.png");
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
 }
 
 #picture{
     width:265px;
     height:189px;
     position: absolute;
-    left:50px;
-    bottom: 411px;
-    background-color:white ;
+    left:676px;
+    bottom: 387px;
+    background-color:black ;
 }
 
 .stats{
@@ -25,33 +29,28 @@ body{
     width: 300px;
     display:flex;
     flex-direction: column;
-    bottom: 260px;
-    left: 31px;
+    bottom: 235px;
+    left: 660px;
 }
 
 #poke-name{
     position: absolute;
     font-size: 30px;
     font-weight: 600;
-    top: 145px;
-    left: 50px;
+    top: 165px;
+    left: 670px;
 }
 
-/* #abilities{
-    top: 417px;
-    left: 100px;
+#page-info{
+    background-color: white;
+    max-width: 600px;
+    margin-right: 20px;
 }
 
-#moves{
-    top: 440px;
-    left: 30px;
+#card{
+    border-radius: 1em;
 }
 
-#height{
-    top: 465px;
-    left: 140px;
-} */
-
-
-
-
+h1{
+    text-align: center;
+}
