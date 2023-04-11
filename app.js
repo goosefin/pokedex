@@ -47,7 +47,7 @@ let check = () => {
                     break
                 }
             }
-            pokeImg.setAttribute("src",`${data.sprites.front_default}`)
+            pokeImg.setAttribute("src",`${data.sprites.other['official-artwork'].front_default}`)
             pokeName.innerText = data.name
             pokeHp.innerText = 'HP: ' + data.stats[0].base_stat
             pokeAttack.innerText = 'Attack:' + data.stats[1].base_stat

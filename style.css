@@ -16,7 +16,7 @@ body{
     height:189px;
     position: absolute;
     left:880px;
-    bottom: 387px;
+    bottom: 356px;
     background-color:black ;
 }
 
@@ -29,7 +29,7 @@ body{
     width: 300px;
     display:flex;
     flex-direction: column;
-    bottom: 235px;
+    bottom: 205px;
     left: 870px;
 }
 
@@ -37,13 +37,14 @@ body{
     position: absolute;
     font-size: 30px;
     font-weight: 600;
-    top: 165px;
+    top: 135px;
     left: 880px;
 }
 
 #page-info{
     background-color: white;
     max-width: 600px;
+    height: 360px;
     margin-right: 20px;
     padding: 1em;
 }
@@ -60,7 +61,19 @@ h1{
 }
 
 .base-stat{
-    color: rgb(115, 115, 115);
+    color: rgb(136, 136, 136);
     font-size: 1.2em;
-    border-bottom: 1.5px solid rgb(115, 115, 115);
+}
+
+.base-stat-div{
+    border-bottom: 1.5px solid rgb(136, 136, 136);
+    padding-bottom: 5px;
+}
+
+#info-stats{
+    display:flex;
+    flex-direction: column;
+    height: 220px;
+    justify-content: space-between;
+    margin-top: 1em;
 }

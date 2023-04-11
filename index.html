@@ -18,12 +18,35 @@
         <button id="search">Search</button>
 
         <div id="info-stats">
-            <p class="base-stat" id="hp">HP</p>
-            <p class="base-stat" id="attack">Attack</p>
-            <p class="base-stat" id="defense">Defense</p>
-            <p class="base-stat" id="sp-attack">Special Attack</p>
-            <p class="base-stat" id="sp-defense">Special Defense</p>
-            <p class="base-stat" id="speed">Speed</p>
+            <div class="base-stat-div">
+                <label class="base-stat" for="hp">HP</label>
+                <progress max="300" value="0" id="hp">0</progress>
+            </div>
+            
+            <div class="base-stat-div">
+                <label class="base-stat" for="attack">Attack</label>
+                <progress max="300" value="0" id="attack">0</progress>
+            </div>
+
+            <div class="base-stat-div">
+                <label class="base-stat" for="defense">Defense</label>
+                <progress max="300" value="0" id="defense">0</progress>
+            </div>
+
+            <div class="base-stat-div">
+                <label class="base-stat" for="sp-attack">Special Attack</label>
+                <progress max="300" value="0" id="sp-attack">0</progress>
+            </div>
+
+            <div class="base-stat-div">
+                <label class="base-stat" for="sp-defense">Special Defense</label>
+                <progress max="300" value="0" id="sp-defense"></progress>
+            </div>
+
+            <div class="base-stat-div">
+                <label class="base-stat" for="speed">Speed</label>
+                <progress max="300" value="0" id="speed">0</progress>
+            </div>
         </div>
     </div>
     
