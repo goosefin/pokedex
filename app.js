@@ -49,12 +49,12 @@ let check = () => {
             }
             pokeImg.setAttribute("src",`${data.sprites.front_default}`)
             pokeName.innerText = data.name
-            pokeHp.innerText = pokeHp.innerText + ' : ' + data.stats[0].base_stat
-            pokeAttack.innerText = pokeAttack.innerText + ' : ' + data.stats[1].base_stat
-            pokeDefense.innerText = pokeDefense.innerText + ' : ' + data.stats[2].base_stat
-            pokeSpAttack.innerText = pokeSpAttack.innerText + ' : ' + data.stats[3].base_stat
-            pokeSpDefense.innerText = pokeSpDefense.innerText + ' : ' + data.stats[4].base_stat
-            pokeSpeed.innerText = pokeSpeed.innerText + ' : ' + data.stats[5].base_stat
+            pokeHp.innerText = 'HP: ' + data.stats[0].base_stat
+            pokeAttack.innerText = 'Attack:' + data.stats[1].base_stat
+            pokeDefense.innerText = 'Defense:' + data.stats[2].base_stat
+            pokeSpAttack.innerText = 'Special Attack: ' + data.stats[3].base_stat
+            pokeSpDefense.innerText = 'Special Defense: ' + data.stats[4].base_stat
+            pokeSpeed.innerText = 'Speed: ' + data.stats[5].base_stat
         })
 }
 

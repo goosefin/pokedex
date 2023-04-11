@@ -58,3 +58,9 @@ h1{
     color: yellow;
     text-shadow: 1px 1px 1px blue, 0 0 0.2em blue, 0 0 0.2em blue;
 }
+
+.base-stat{
+    color: rgb(115, 115, 115);
+    font-size: 1.2em;
+    border-bottom: 1.5px solid rgb(115, 115, 115);
+}
