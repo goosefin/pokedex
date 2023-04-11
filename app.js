@@ -7,11 +7,22 @@ let pokeMoves = document.querySelector('#moves')
 let pokeImg = document.querySelector('#picture')
 let pokeName = document.querySelector('#poke-name')
 let pokeHp = document.querySelector('#hp')
+let hpLab = document.querySelector('#hp-lab')
+let attackLab = document.querySelector('#attack-lab')
+let defenseLab = document.querySelector('#defense-lab')
+let spAttackLab = document.querySelector('#sp-attack-lab')
+let spDefenseLab = document.querySelector('#sp-defense-lab')
+let speedLab = document.querySelector('#speed-lab')
 let pokeAttack = document.querySelector('#attack')
 let pokeDefense = document.querySelector('#defense')
 let pokeSpAttack = document.querySelector('#sp-attack')
 let pokeSpDefense = document.querySelector('#sp-defense')
 let pokeSpeed = document.querySelector('#speed')
+
+const addAttributes = (selector,data,num) =>{
+    selector.innerText = data.stats[num].base_stat
+    selector.setAttribute("value",`${data.stats[num].base_stat}`)
+} 
 
 let check = () => {
     fetch('https://pokeapi.co/api/v2/pokemon/'+searchName.value+'/')
@@ -49,14 +60,21 @@ let check = () => {
             }
             pokeImg.setAttribute("src",`${data.sprites.other['official-artwork'].front_default}`)
             pokeName.innerText = data.name
-            pokeHp.innerText = 'HP: ' + data.stats[0].base_stat
-            pokeAttack.innerText = 'Attack:' + data.stats[1].base_stat
-            pokeDefense.innerText = 'Defense:' + data.stats[2].base_stat
-            pokeSpAttack.innerText = 'Special Attack: ' + data.stats[3].base_stat
-            pokeSpDefense.innerText = 'Special Defense: ' + data.stats[4].base_stat
-            pokeSpeed.innerText = 'Speed: ' + data.stats[5].base_stat
+            hpLab.innerText = 'HP: ' + data.stats[0].base_stat 
+            addAttributes(pokeHp,data,0)
+            attackLab.innerText = 'Attack: ' + data.stats[1].base_stat
+            addAttributes(pokeAttack,data,1)
+            defenseLab.innerText = 'Defense: ' + data.stats[2].base_stat
+            addAttributes(pokeDefense,data,2)
+            spAttackLab.innerText = 'Special Attack: ' + data.stats[3].base_stat
+            addAttributes(pokeSpAttack,data,3)
+            spDefenseLab.innerText = 'Speacial Defense: ' + data.stats[4].base_stat
+            addAttributes(pokeSpDefense,data,4)
+            speedLab.innerText = 'Speed: ' + data.stats[5].base_stat
+            addAttributes(pokeSpeed,data,5)
         })
 }
 
 
 search.addEventListener('click',check)
+
