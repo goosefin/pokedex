@@ -4,15 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
     <div id="page-info">
-        <h1>Pokemon Pokedex</h1>
+        <h1>Pokémon Pokédex</h1>
         <p>Welcome Trainer! Use this portal to look up pokemon and learn about their stats.</p>
         <input type="text" id="search-name">
         <button id="search">Search</button>
+
+        <div id="info-stats">
+            <p id="hp">HP</p>
+            <p id="attack">Attack</p>
+            <p id="defense">Defense</p>
+            <p id="sp-attack">Special Attack</p>
+            <p id="sp-defense">Special Defense</p>
+            <p id="speed">Speed</p>
+        </div>
     </div>
     
     <div>
@@ -21,9 +33,9 @@
         <span class="stats" id="poke-name"></span>
 
         <div id="card-stats">
-            <p class="stats" id="height">Height: </p>
-            <p class="stats" id="moves">Top Moves: </p>
-            <p class="stats" id="abilities">Abilities: </p>
+            <p class="stats" id="height"></p>
+            <p class="stats" id="moves"></p>
+            <p class="stats" id="abilities"></p>
         </div>
         
         <img id="card" src="png-clipart-blanks-classic-cards-pokemon-trading-card-thumbnail.png"/>

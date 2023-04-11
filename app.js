@@ -6,6 +6,12 @@ let pokeAbilities = document.querySelector('#abilities')
 let pokeMoves = document.querySelector('#moves')
 let pokeImg = document.querySelector('#picture')
 let pokeName = document.querySelector('#poke-name')
+let pokeHp = document.querySelector('#hp')
+let pokeAttack = document.querySelector('#attack')
+let pokeDefense = document.querySelector('#defense')
+let pokeSpAttack = document.querySelector('#sp-attack')
+let pokeSpDefense = document.querySelector('#sp-defense')
+let pokeSpeed = document.querySelector('#speed')
 
 let check = () => {
     fetch('https://pokeapi.co/api/v2/pokemon/'+searchName.value+'/')
@@ -43,6 +49,12 @@ let check = () => {
             }
             pokeImg.setAttribute("src",`${data.sprites.front_default}`)
             pokeName.innerText = data.name
+            pokeHp.innerText = pokeHp.innerText + ' : ' + data.stats[0].base_stat
+            pokeAttack.innerText = pokeAttack.innerText + ' : ' + data.stats[1].base_stat
+            pokeDefense.innerText = pokeDefense.innerText + ' : ' + data.stats[2].base_stat
+            pokeSpAttack.innerText = pokeSpAttack.innerText + ' : ' + data.stats[3].base_stat
+            pokeSpDefense.innerText = pokeSpDefense.innerText + ' : ' + data.stats[4].base_stat
+            pokeSpeed.innerText = pokeSpeed.innerText + ' : ' + data.stats[5].base_stat
         })
 }
 
